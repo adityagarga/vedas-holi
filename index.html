@@ -61,7 +61,8 @@
     border-radius: 18px 18px 0 0;
     box-shadow: 0 -4px 16px rgba(0,0,0,.18);
     max-height: 70vh; display: flex; flex-direction: column;
-    transform: translateY(calc(100% - 90px));
+    padding-bottom: env(safe-area-inset-bottom);
+    transform: translateY(calc(100% - 130px - env(safe-area-inset-bottom)));
     transition: transform .25s ease;
   }
   .cart.open { transform: translateY(0); }
@@ -100,7 +101,7 @@
 
   .empty { text-align: center; color: #aaa; padding: 24px; font-size: 15px; }
 
-  .subtotals { display:flex; gap:20px; padding: 6px 16px 12px; font-size:20px; color:#777; font-weight:600; }
+  .subtotals { display:flex; gap:20px; padding: 6px 16px 12px; font-size:20px; color:#777; font-weight:600; white-space:nowrap; flex-wrap:wrap; }
   .subtotals b { color:#b23a00; font-size:26px; font-weight:900; }
 </style>
 </head>
